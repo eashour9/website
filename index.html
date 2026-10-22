@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Esslam Ashour — computer science student at the University of Chicago, interested in backend engineering, cloud infrastructure, and developer tools.">
+  <title>eashour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Silkscreen:wght@400&display=swap" rel="stylesheet">
+  <script>
+    // Restore a manually selected theme before the page is painted.
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page" id="top">
+    <header class="header">
+      <a class="wordmark" href="#top" aria-label="Esslam Ashour, home">ea<span aria-hidden="true">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#experience">work</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">résumé ↗</a>
+        <button class="theme-toggle" type="button">dark mode</button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="intro" aria-labelledby="name">
+        <h1 id="name">Esslam Ashour</h1>
+        <p class="role">CS @ UChicago, Class of 2027</p>
+        <p class="bio">I'm a computer science student at the <strong>University of Chicago</strong>, graduating in June 2027. I work on backend systems, cloud infrastructure, and developer tools. Previously, I interned twice at AWS.</p>
+        <div class="links">
+          <a href="mailto:esslamhosam@gmail.com">email ↗</a>
+          <a href="https://github.com/eashour9" target="_blank" rel="noopener noreferrer">github ↗</a>
+          <a href="https://linkedin.com/in/esslam-ashour" target="_blank" rel="noopener noreferrer">linkedin ↗</a>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-title"><h2 id="experience-title">Experience</h2></div>
+        <div class="entries">
+          <article class="entry">
+            <p class="entry-date">2026</p>
+            <div>
+              <h3>Software Development Engineer Intern <span class="at">@ AWS</span></h3>
+              <p>Built a CloudFormation drift investigation service in Python and TypeScript, using CloudTrail, Step Functions, and Bedrock to trace infrastructure changes. In evaluation, 93% of investigations finished in under 90 seconds, with a 97.5% overall agent evaluation score.</p>
+            </div>
+          </article>
+          <article class="entry">
+            <p class="entry-date">2025</p>
+            <div>
+              <h3>Software Development Engineer Intern <span class="at">@ AWS</span></h3>
+              <p>Expanded Amplify AI Kit's cross-region inference support across 21 AWS regions, from 54 to 138 model-region combinations. Built a Lambda-backed CDK construct for deployment-time model configuration.</p>
+            </div>
+          </article>
+          <article class="entry">
+            <p class="entry-date">2025–now</p>
+            <div>
+              <h3>Software Developer <span class="at">@ UChicago CSIL</span></h3>
+              <p>Lead five developers building internal tools and reviewing code. Developed shared authentication and scheduling APIs that save 10–12 hours of manual work each quarter.</p>
+            </div>
+          </article>
+          <article class="entry">
+            <p class="entry-date">2024</p>
+            <div>
+              <h3>Software Developer Intern <span class="at">@ Alleo.ai</span></h3>
+              <p>Reduced p95 API latency by 34% through query and MongoDB index optimizations. Built a self-service troubleshooting flow that contributed to a 56% reduction in support tickets over three months.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-title"><h2 id="projects-title">Projects</h2></div>
+        <div class="project">
+          <div class="project-heading"><h3>AWS Amplify — cross-region inference</h3></div>
+          <p>Open-source work from my 2025 AWS internship. Extended Bedrock model support across AWS regions and built deployment-time resolution for model and inference-profile configuration.</p>
+          <div class="project-sources" aria-label="Cross-region inference feature branches">
+            <span>feature branches:</span>
+            <a href="https://github.com/aws-amplify/amplify-backend/tree/feature/cross-region-inference" target="_blank" rel="noopener noreferrer">amplify-backend ↗</a>
+            <a href="https://github.com/aws-amplify/amplify-category-api/tree/feature/cross-region-inference" target="_blank" rel="noopener noreferrer">amplify-category-api ↗</a>
+            <a href="https://github.com/aws-amplify/amplify-data/tree/feature/cross-region-inference" target="_blank" rel="noopener noreferrer">amplify-data ↗</a>
+          </div>
+          <p class="project-tech">typescript · aws cdk · amazon bedrock</p>
+        </div>
+        <div class="project">
+          <div class="project-heading"><h3>CrustyDB <span class="at">/ CMSC 23500</span></h3></div>
+          <p>A full-fledged database management system built in Rust as part of UChicago's CMSC 23500.</p>
+          <p class="project-tech">rust · database systems</p>
+        </div>
+        <div class="project">
+          <div class="project-heading"><h3>uchifinals</h3><div class="project-links"><a href="https://uchifinals.vercel.app/" target="_blank" rel="noopener noreferrer">live ↗</a><a href="https://github.com/eashour9/uchifinals" target="_blank" rel="noopener noreferrer">source ↗</a></div></div>
+          <p>A final-exam finder for UChicago students. Search by course code, name, or instructor and add exam dates to your calendar.</p>
+          <p class="project-tech">next.js · typescript · prisma · postgresql</p>
+        </div>
+        <div class="project">
+          <div class="project-heading"><h3>hgrep</h3><a href="https://github.com/eashour9/final-project-esslam-ashour" target="_blank" rel="noopener noreferrer">source ↗</a></div>
+          <p>A regex engine and grep-like CLI written in Haskell. Uses recursive-descent parsing, Thompson's construction, and NFA simulation without recursive backtracking.</p>
+          <p class="project-tech">haskell · parsing · automata</p>
+        </div>
+        <div class="project">
+          <div class="project-heading"><h3>Unix shell</h3></div>
+          <p>A small shell in C supporting interactive and batch execution, command parsing, built-ins, and file-descriptor redirection using POSIX system calls.</p>
+          <p class="project-tech">c · posix · linux</p>
+        </div>
+      </section>
+
+      <section class="section" id="tools" aria-labelledby="tools-title">
+        <div class="section-title"><h2 id="tools-title">Tools &amp; languages</h2></div>
+        <p class="tools-text">Python, TypeScript, Rust, C, C#, Haskell, SQL, AWS, Docker, Linux, Node.js, PostgreSQL, MongoDB.</p>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-title"><h2 id="contact-title">Contact</h2></div>
+        <p>If you'd like to talk about software, systems, or an opportunity, feel free to reach out.</p>
+        <a class="email" href="mailto:esslamhosam@gmail.com">esslamhosam@gmail.com ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Esslam Ashour</span>
+    </footer>
+  </div>
+  <script>
+    const toggle = document.querySelector('.theme-toggle');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function darkModeIsActive() {
+      const selected = document.documentElement.dataset.theme;
+      return selected ? selected === 'dark' : systemTheme.matches;
+    }
+
+    function updateToggle() {
+      toggle.textContent = darkModeIsActive() ? 'light mode' : 'dark mode';
+      document.querySelector('meta[name="theme-color"]').content = darkModeIsActive() ? '#18191b' : '#f8f7f4';
+    }
+
+    toggle.addEventListener('click', () => {
+      const next = darkModeIsActive() ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (_) {}
+      updateToggle();
+    });
+
+    systemTheme.addEventListener('change', updateToggle);
+    updateToggle();
+  </script>
+</body>
+</html>
